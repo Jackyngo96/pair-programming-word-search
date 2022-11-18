@@ -19,8 +19,23 @@ describe("#wordSearch()", function() {
 
     assert.isFalse(result);
   });
+  it("should return true if the word is present(vertical)", function() {
+    const result = wordSearch([
+      ['F', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['R', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
+      ['A', 'F', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['N', 'M', 'J', 'T', 'E', 'V', 'R', 'G'],
+      ['K', 'H', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'FRANK')
 
-  it("should return true if the word is present", function() {
+    assert.isTrue(result);
+  });
+
+  it("should return true if the word is present(horizontal)", function() {
     const result = wordSearch([
       ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
       ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
@@ -35,4 +50,6 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
 });
+ 
